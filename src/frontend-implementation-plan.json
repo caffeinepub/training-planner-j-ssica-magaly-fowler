@@ -1,0 +1,83 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Swap site hero + headshot photos with new professionally processed static assets",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "summary": "Add the two newly uploaded photos as static assets under frontend/public/assets/generated and stop using the currently displayed site photos.",
+      "acceptanceCriteria": [
+        "New image assets exist under frontend/public/assets/generated and are referenced by the UI (not served from the backend).",
+        "The previously used on-site photos are no longer displayed in the UI sections being updated (Hero and profile/headshot areas)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg",
+          "operation": "create",
+          "description": "Add the original uploaded hero source image as a static frontend asset (as requested)."
+        },
+        {
+          "path": "frontend/public/assets/generated/1770831915760.png",
+          "operation": "create",
+          "description": "Add the original uploaded headshot source image as a static frontend asset (as requested)."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-trainingplanner.dim_1600x900.png",
+          "operation": "delete",
+          "description": "Remove the previously used hero image asset to ensure it is no longer displayed/used."
+        },
+        {
+          "path": "frontend/public/assets/generated/jessica-headshot.dim_800x800.png",
+          "operation": "delete",
+          "description": "Remove the previously used headshot image asset to ensure it is no longer displayed/used."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Replace the Hero section image with a professionally processed landscape hero photo derived from the newly uploaded image.",
+      "acceptanceCriteria": [
+        "frontend/src/components/training-planner/HeroSection.tsx no longer references /assets/generated/hero-trainingplanner.dim_1600x900.png and instead references the new hero photo asset.",
+        "The Hero image displays crisply on mobile and desktop (no stretching; maintain aspect ratio; appropriate object-fit styling if needed)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-photo-v2.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the professionally processed hero image asset (derived from e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg) as a static frontend asset."
+        },
+        {
+          "path": "frontend/src/components/training-planner/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Update the Hero image src to reference frontend/public/assets/generated/hero-photo-v2.dim_1600x900.png (via the /assets/generated/... path) and adjust existing Tailwind classes as needed to preserve aspect ratio and prevent stretching (e.g., ensure appropriate object-fit behavior)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "summary": "Replace the header avatar and Professional Bio headshot with a professionally processed square portrait while keeping the logo fallback on load error.",
+      "acceptanceCriteria": [
+        "frontend/src/components/training-planner/Header.tsx and frontend/src/components/training-planner/ProfessionalBioSection.tsx reference the new headshot asset path by default.",
+        "If the new headshot asset fails to load, the UI falls back to /assets/generated/logo-jmf.dim_512x512.png as it does today.",
+        "The headshot remains correctly cropped as a circle in the UI without distortion (object-fit cover)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/jessica-headshot-v2.dim_800x800.png",
+          "operation": "create",
+          "description": "Add the professionally processed square headshot image asset (derived from 1770831915760.png) as a static frontend asset."
+        },
+        {
+          "path": "frontend/src/components/training-planner/Header.tsx",
+          "operation": "modify",
+          "description": "Update the default avatar image state to use /assets/generated/jessica-headshot-v2.dim_800x800.png while preserving the existing onError fallback behavior to /assets/generated/logo-jmf.dim_512x512.png and keeping circle crop (object-fit cover)."
+        },
+        {
+          "path": "frontend/src/components/training-planner/ProfessionalBioSection.tsx",
+          "operation": "modify",
+          "description": "Update the default bio headshot image state to use /assets/generated/jessica-headshot-v2.dim_800x800.png while preserving the existing onError fallback behavior to /assets/generated/logo-jmf.dim_512x512.png and keeping circle crop (object-fit cover)."
+        }
+      ]
+    }
+  ]
+}

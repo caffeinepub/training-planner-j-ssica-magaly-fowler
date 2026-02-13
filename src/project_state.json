@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Interactive 'Training Planner' landing page for Personal Trainer Jéssica Magaly Fowler with modern health/performance design, workout schedule, exercise recommendations, hydration tools, BMI/ideal weight calculators, nutritional guide, and professional bio.",
+  "architectural_notes": [
+    "Site includes interactive planner components (calculators/reminders) alongside landing-page marketing sections; tone must be motivational, technical, and professional.",
+    "Include a WhatsApp CTA that deep-links to a direct chat using the user’s phone number (e.g., wa.me link) from the landing page.",
+    "Include the trainer’s professional photo as a static frontend asset (provided by the client) and display it in appropriate sections (Hero/Bio).",
+    "Update site imagery by removing current photos and replacing them with user-provided photos; display them in a professional manner and allow minor color adjustments to clothing if needed."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional square portrait photo with clean studio background (jessica-headshot-v2.dim_800x800.png)\n- Lifestyle fitness photo with gym background, landscape crop with safe margins (hero-photo-v2.dim_1600x900.png)\n\n## Edit Images\n- Create a professional square headshot from upload (1770831915760.png > jessica-headshot-v2.dim_800x800.png)\n- Create a clean hero image from upload; remove any overlaid text; optionally adjust clothing color (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg > hero-photo-v2.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-interactive-landing-page-training-planner-for-personal-trainer-j-ssica-magaly-fowler-with-a-modern-health-performance-focused-ui-the-page-must-be-fully-usable-on-mobile-and-desktop-and-structured-into-clear-sections-hero-intro-weekly-training-schedule-exercise-library-top-3-per-muscle-group-hydration-tools-bmi-ideal-weight-nutrition-guide-body-recomposition-3-recipes-and-professional-bio",
+      "title": "Create a single-page, interactive Landing Page (“Training Planner”) for Personal Trainer Jéssica Magaly Fowler with a modern health/performance-focused UI. The page must be fully usable on mobile and desktop and structured into clear sections: Hero/intro, Weekly Training Schedule, Exercise Library (top 3 per muscle group), Hydration, Tools (BMI + Ideal Weight), Nutrition Guide (body recomposition + 3 recipes), and Professional Bio.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-weekly-training-schedule-module-with-the-exact-weekly-plan-provided-mon-glutes-shoulders-tue-back-biceps-wed-rest-thu-legs-abs-calves-fri-chest-triceps-sat-cardio-sun-rest-the-module-must-support-interaction-selecting-a-day-highlights-it-and-reveals-the-day-s-focus-with-a-brief-motivating-guidance-paragraph-for-that-day",
+      "title": "Implement the Weekly Training Schedule module with the exact weekly plan provided (Mon: Glutes/Shoulders | Tue: Back/Biceps | Wed: Rest | Thu: Legs/Abs/Calves | Fri: Chest/Triceps | Sat: Cardio | Sun: Rest). The module must support interaction: selecting a day highlights it and reveals the day’s focus with a brief, motivating guidance paragraph for that day.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-exercise-library-section-listing-the-top-3-exercises-for-each-relevant-muscle-group-from-the-schedule-glutes-shoulders-back-biceps-legs-abs-calves-chest-triceps-plus-cardio-for-each-muscle-group-show-exactly-three-exercises-with-a-brief-technical-but-clear-explanation-and-at-least-one-form-cue-or-common-mistake-to-avoid",
+      "title": "Add an Exercise Library section listing the top 3 exercises for each relevant muscle group from the schedule (Glutes, Shoulders, Back, Biceps, Legs, Abs, Calves, Chest, Triceps, plus Cardio). For each muscle group, show exactly three exercises with a brief, technical-but-clear explanation and at least one form cue or common mistake to avoid.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-hydration-section-that-includes-1-a-water-intake-calculator-ui-and-logic-inputs-such-as-body-weight-and-activity-level-output-daily-water-target-in-liters-and-cups-and-2-an-in-app-hydration-reminder-system-that-can-be-started-stopped-and-shows-reminders-inside-the-app-at-the-chosen-interval-while-the-page-is-open",
+      "title": "Create a Hydration section that includes: (1) a water intake calculator UI and logic (inputs such as body weight and activity level; output daily water target in liters and cups), and (2) an in-app hydration reminder system that can be started/stopped and shows reminders inside the app at the chosen interval while the page is open.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-tools-section-with-a-a-bmi-calculator-height-weight-unit-handling-and-bmi-category-output-and-b-an-ideal-weight-calculator-collect-required-inputs-and-output-an-estimated-ideal-weight-range-include-clear-disclaimers-that-these-are-estimates-and-not-medical-advice",
+      "title": "Implement a Tools section with (A) a BMI calculator (height + weight; unit handling and BMI category output) and (B) an Ideal Weight calculator (collect required inputs and output an estimated ideal weight range). Include clear disclaimers that these are estimates and not medical advice.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-nutrition-guide-section-focused-on-body-recomposition-gain-muscle-lose-fat-including-key-principles-protein-caloric-targets-strength-training-synergy-consistency-plus-exactly-3-practical-recipes-with-ingredients-and-simple-step-by-step-instructions-keep-the-content-motivational-technical-and-professional-in-english",
+      "title": "Add a Nutrition Guide section focused on body recomposition (gain muscle, lose fat) including: key principles (protein, caloric targets, strength training synergy, consistency), plus exactly 3 practical recipes with ingredients and simple step-by-step instructions. Keep the content motivational, technical, and professional in English.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-professional-bio-section-for-j-ssica-magaly-fowler-including-name-age-33-issa-florida-certification-physical-education-teacher-since-2018-and-roles-as-personal-trainer-and-issa-nutritional-coach-trainer-include-a-concise-credibility-oriented-bio-and-a-clear-call-to-action-e-g-book-a-consultation",
+      "title": "Add a Professional Bio section for Jéssica Magaly Fowler including: name, age (33), ISSA Florida certification, “Physical Education teacher since 2018”, and roles as Personal Trainer and ISSA Nutritional Coach/Trainer. Include a concise credibility-oriented bio and a clear call-to-action (e.g., “Book a consultation”).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-establish-and-apply-a-cohesive-visual-theme-for-the-entire-landing-page-consistent-with-modern-health-and-performance-e-g-clean-layout-strong-typography-energetic-accent-color-palette-not-based-on-blue-purple-consistent-component-styling-use-tailwind-existing-ui-components-by-composition-do-not-modify-read-only-ui-component-sources",
+      "title": "Establish and apply a cohesive visual theme for the entire landing page consistent with “modern health and performance” (e.g., clean layout, strong typography, energetic accent color palette not based on blue/purple, consistent component styling). Use Tailwind + existing UI components by composition (do not modify read-only UI component sources).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-custom-static-images-for-the-landing-page-hero-banner-a-minimal-logo-mark-and-section-icons-and-render-them-from-static-assets-in-the-frontend-do-not-serve-images-from-the-backend",
+      "title": "Generate and include custom static images for the landing page (hero/banner, a minimal logo mark, and section icons) and render them from static assets in the frontend (do not serve images from the backend).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-whatsapp-deep-link-that-opens-a-direct-chat-with-the-trainer-s-whatsapp-number-1-9549354101-when-users-click-the-primary-consultation-cta-s-on-the-page-e-g-the-hero-book-your-consultation-button-and-the-bio-book-your-free-consultation-button",
+      "title": "Add a WhatsApp deep link that opens a direct chat with the trainer’s WhatsApp number \"1+ 9549354101\" when users click the primary consultation CTA(s) on the page (e.g., the Hero \"Book Your Consultation\" button and the Bio \"Book Your Free Consultation\" button).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-secondary-contact-ui-in-the-professional-bio-section-so-that-any-general-contact-action-e-g-get-in-touch-also-routes-to-the-same-whatsapp-direct-chat-or-is-clearly-labeled-as-a-whatsapp-contact-action-in-english",
+      "title": "Update secondary contact UI in the Professional Bio section so that any general contact action (e.g., \"Get in Touch\") also routes to the same WhatsApp direct chat (or is clearly labeled as a WhatsApp contact action in English).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-progress-tracking-section-in-the-react-app-that-lets-users-log-completed-workouts-for-the-weekly-plan-the-ui-must-allow-selecting-the-scheduled-day-monday-sunday-entering-an-optional-duration-in-minutes-e-g-20-and-an-optional-notes-field-then-saving-the-entry-and-showing-a-list-of-previously-saved-entries",
+      "title": "Create a new Progress Tracking section in the React app that lets users log completed workouts for the weekly plan. The UI must allow selecting the scheduled day (Monday–Sunday), entering an optional duration in minutes (e.g., 20), and an optional notes field, then saving the entry and showing a list of previously saved entries.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-internet-identity-authentication-expectations-for-progress-tracking-if-the-user-is-not-authenticated-the-progress-tracking-section-must-clearly-prompt-them-to-sign-in-to-save-and-view-their-workout-history-user-facing-text-must-be-in-english",
+      "title": "Integrate Internet Identity authentication expectations for progress tracking: if the user is not authenticated, the Progress Tracking section must clearly prompt them to sign in to save and view their workout history (user-facing text must be in English).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optionally-enhance-the-weekly-training-schedule-section-to-reflect-progress-by-indicating-which-days-have-a-completed-workout-logged-based-on-the-authenticated-user-s-logs-without-changing-the-existing-schedule-content",
+      "title": "Optionally enhance the Weekly Training Schedule section to reflect progress by indicating which days have a completed workout logged (based on the authenticated user’s logs), without changing the existing schedule content.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-static-professional-headshot-image-asset-for-j-ssica-magaly-fowler-under-the-frontend-public-assets-and-ensure-it-is-used-as-the-primary-profile-photo-on-the-site",
+      "title": "Add a new static professional headshot image asset for Jéssica Magaly Fowler under the frontend public assets and ensure it is used as the primary profile photo on the site.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-professional-bio-section-to-display-the-new-headshot-image-instead-of-the-current-logo-image-while-preserving-the-existing-layout-and-ensuring-good-mobile-desktop-rendering",
+      "title": "Update the Professional Bio section to display the new headshot image instead of the current logo image, while preserving the existing layout and ensuring good mobile/desktop rendering.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-header-branding-avatar-to-use-the-same-new-headshot-image-for-consistency-with-a-safe-fallback-to-the-existing-logo-image",
+      "title": "Update the site header branding avatar to use the same new headshot image for consistency, with a safe fallback to the existing logo image.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-two-newly-uploaded-photos-e3d60550-0886-11f1-b0bb-e7f856b020c7-jpg-and-1770831915760-png-to-the-frontend-as-static-assets-under-frontend-public-assets-generated-and-remove-stop-using-the-current-photos-that-appear-on-the-website",
+      "title": "Add the two newly uploaded photos (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg and 1770831915760.png) to the frontend as static assets under frontend/public/assets/generated, and remove/stop using the current photos that appear on the website.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-section-image-to-use-a-professionally-processed-version-derived-from-e3d60550-0886-11f1-b0bb-e7f856b020c7-jpg-crop-cleanup-as-needed-remove-any-overlaid-text-if-present-and-optionally-adjust-clothing-color-for-a-cohesive-look",
+      "title": "Update the Hero section image to use a professionally processed version derived from e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg (crop/cleanup as needed, remove any overlaid text if present, and optionally adjust clothing color for a cohesive look).",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-profile-headshot-image-used-in-both-the-site-header-avatar-and-the-professional-bio-section-to-use-a-professionally-processed-square-portrait-derived-from-1770831915760-png-optional-clothing-color-adjustment-allowed-keep-the-existing-safe-fallback-to-the-logo-image-on-load-error",
+      "title": "Update the profile/headshot image used in both the site header avatar and the Professional Bio section to use a professionally processed square portrait derived from 1770831915760.png (optional clothing color adjustment allowed). Keep the existing safe fallback to the logo image on load error.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create modern health/performance Landing Page structure for Personal Trainer Jéssica Magaly Fowler as an interactive 'Training Planner'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add weekly workout schedule module (Seg: Glúteo/Ombro | Ter: Costas/Bíceps | Qua: Descanso | Qui: Perna/Abs/Panturrilha | Sex: Peito/Tríceps | Sáb: Cardio | Dom: Descanso)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Provide top 3 exercises per muscle group with brief explanations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Hydration section with reminder and water intake calculator logic",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add tools: BMI (IMC) calculator and Ideal Weight calculator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add nutritional guide for body recomposition with 3 practical recipes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add professional bio section for Jéssica Magaly Fowler (Ed. Física since 2018, ISSA Personal & Nutritional Trainer) with motivational/technical/professional tone",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add progress tracking so users can log completed workouts in the Training Planner",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add clickable WhatsApp contact button/link that opens a direct chat to +1 9549354101",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add backend support for workout progress tracking so an authenticated user can create, list, and delete their own completed-workout logs. Each log must include: the scheduled day (Monday–Sunday), completion timestamp, optional duration in minutes, and optional user notes.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add the trainer’s professional photo/headshot to the site (e.g., in Hero and/or Professional Bio section) using a static frontend asset",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Replace existing website photos with newly provided photos and display them professionally (optional clothing color adjustment if needed)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Training Planner - Jéssica Magaly Fowler",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T05:35:12.750Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-19",
+        "summary": "Add the two newly uploaded photos (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg and 1770831915760.png) to the frontend as static assets under frontend/public/assets/generated, and remove/stop using the current photos that appear on the website.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg",
+          "frontend/public/assets/generated/1770831915760.png",
+          "frontend/public/assets/generated/hero-trainingplanner.dim_1600x900.png",
+          "frontend/public/assets/generated/jessica-headshot.dim_800x800.png"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/hero-trainingplanner.dim_1600x900.png",
+          "frontend/public/assets/generated/jessica-headshot.dim_800x800.png"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Update the Hero section image to use a professionally processed version derived from e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg (crop/cleanup as needed, remove any overlaid text if present, and optionally adjust clothing color for a cohesive look).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/hero-photo-v2.dim_1600x900.png",
+          "frontend/src/components/training-planner/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/hero-photo-v2.dim_1600x900.png",
+          "frontend/src/components/training-planner/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Update the profile/headshot image used in both the site header avatar and the Professional Bio section to use a professionally processed square portrait derived from 1770831915760.png (optional clothing color adjustment allowed). Keep the existing safe fallback to the logo image on load error.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/jessica-headshot-v2.dim_800x800.png",
+          "frontend/src/components/training-planner/Header.tsx",
+          "frontend/src/components/training-planner/ProfessionalBioSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/jessica-headshot-v2.dim_800x800.png",
+          "frontend/src/components/training-planner/Header.tsx",
+          "frontend/src/components/training-planner/ProfessionalBioSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/hero-photo-v2.dim_1600x900.png",
+    "frontend/public/assets/generated/hero-trainingplanner.dim_1600x900.png",
+    "frontend/public/assets/generated/jessica-headshot-v2.dim_800x800.png",
+    "frontend/public/assets/generated/jessica-headshot.dim_800x800.png",
+    "frontend/src/components/training-planner/Header.tsx",
+    "frontend/src/components/training-planner/HeroSection.tsx",
+    "frontend/src/components/training-planner/ProfessionalBioSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

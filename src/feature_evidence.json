@@ -1,0 +1,61 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-the-two-newly-uploaded-photos-e3d60550-0886-11f1-b0bb-e7f856b020c7-jpg-and-1770831915760-png-to-the-frontend-as-static-assets-under-frontend-public-assets-generated-and-remove-stop-using-the-current-photos-that-appear-on-the-website",
+      "featureTitle": "Add the two newly uploaded photos (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg and 1770831915760.png) to the frontend as static assets under frontend/public/assets/generated, and remove/stop using the current photos that appear on the website.",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-hero-section-image-to-use-a-professionally-processed-version-derived-from-e3d60550-0886-11f1-b0bb-e7f856b020c7-jpg-crop-cleanup-as-needed-remove-any-overlaid-text-if-present-and-optionally-adjust-clothing-color-for-a-cohesive-look",
+      "featureTitle": "Update the Hero section image to use a professionally processed version derived from e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg (crop/cleanup as needed, remove any overlaid text if present, and optionally adjust clothing color for a cohesive look).",
+      "files": [
+        "frontend/src/components/training-planner/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-profile-headshot-image-used-in-both-the-site-header-avatar-and-the-professional-bio-section-to-use-a-professionally-processed-square-portrait-derived-from-1770831915760-png-optional-clothing-color-adjustment-allowed-keep-the-existing-safe-fallback-to-the-logo-image-on-load-error",
+      "featureTitle": "Update the profile/headshot image used in both the site header avatar and the Professional Bio section to use a professionally processed square portrait derived from 1770831915760.png (optional clothing color adjustment allowed). Keep the existing safe fallback to the logo image on load error.",
+      "files": [
+        "frontend/src/components/training-planner/Header.tsx",
+        "frontend/src/components/training-planner/ProfessionalBioSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

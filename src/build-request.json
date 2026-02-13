@@ -1,0 +1,90 @@
+{
+  "kind": "build_request",
+  "title": "Replace existing site photos with newly uploaded photos (professional processing)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "text": "Add the two newly uploaded photos (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg and 1770831915760.png) to the frontend as static assets under frontend/public/assets/generated, and remove/stop using the current photos that appear on the website.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Replace them with these photos; remove the photos that are on the website and replace them with these in a professional manner. You can change the color of the clothing if needed."
+        ]
+      },
+      "acceptanceCriteria": [
+        "New image assets exist under frontend/public/assets/generated and are referenced by the UI (not served from the backend).",
+        "The previously used on-site photos are no longer displayed in the UI sections being updated (Hero and profile/headshot areas)."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Update the Hero section image to use a professionally processed version derived from e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg (crop/cleanup as needed, remove any overlaid text if present, and optionally adjust clothing color for a cohesive look).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Replace them with these photos; remove the photos that are on the website and replace them with these in a professional manner. You can change the color of the clothing if needed."
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/src/components/training-planner/HeroSection.tsx no longer references /assets/generated/hero-trainingplanner.dim_1600x900.png and instead references the new hero photo asset.",
+        "The Hero image displays crisply on mobile and desktop (no stretching; maintain aspect ratio; appropriate object-fit styling if needed)."
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Update the profile/headshot image used in both the site header avatar and the Professional Bio section to use a professionally processed square portrait derived from 1770831915760.png (optional clothing color adjustment allowed). Keep the existing safe fallback to the logo image on load error.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Replace them with these photos; remove the photos that are on the website and replace them with these in a professional manner. You can change the color of the clothing if needed."
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/src/components/training-planner/Header.tsx and frontend/src/components/training-planner/ProfessionalBioSection.tsx reference the new headshot asset path by default.",
+        "If the new headshot asset fails to load, the UI falls back to /assets/generated/logo-jmf.dim_512x512.png as it does today.",
+        "The headshot remains correctly cropped as a circle in the UI without distortion (object-fit cover)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for any user-facing text.",
+    "Do not modify files under frontend/src/components/ui (compose existing UI components instead).",
+    "Do not route images through the backend; images must be static frontend assets under frontend/public/assets/generated.",
+    "Backend remains single-actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Changing any non-image content (training schedule, exercise library entries, calculators, nutrition copy, WhatsApp behavior).",
+    "Adding new sections or new functionality unrelated to photo replacement.",
+    "Implementing external image hosting or a CMS/gallery manager."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional square portrait photo with clean studio background (jessica-headshot-v2.dim_800x800.png)",
+      "Lifestyle fitness photo with gym background, landscape crop with safe margins (hero-photo-v2.dim_1600x900.png)"
+    ],
+    "edits": [
+      "Create a professional square headshot from upload (1770831915760.png > jessica-headshot-v2.dim_800x800.png)",
+      "Create a clean hero image from upload; remove any overlaid text; optionally adjust clothing color (e3d60550-0886-11f1-b0bb-e7f856b020c7.jpg > hero-photo-v2.dim_1600x900.png)"
+    ]
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
